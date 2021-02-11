@@ -43,5 +43,9 @@
     <fragment
         android:id="@+id/createOtherInformationFragment"
         android:name="com.android.holyeat.ui.auth.create_user.other_information.CreateOtherInformationFragment"
-        android:label="CreateOtherInformationFragment" />
+        android:label="CreateOtherInformationFragment" >
+        <argument
+            android:name="data"
+            app:argType="com.android.holyeat.data.model.UserModel" />
+    </fragment>
 </navigation>

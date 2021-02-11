@@ -32,7 +32,7 @@ class SignUpFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.status.observe(viewLifecycleOwner) {
-            findNavController().navigate(R.id.action_global_mainFragment)
+            findNavController().navigate(SignUpFragmentDirections.actionSignUpFragmentToCreateMainInformationFragment())
         }
 
         binding.signInBtn.setOnClickListener {
