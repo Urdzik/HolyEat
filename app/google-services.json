@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "548945070142",
+    "project_id": "holyeat-8de97",
+    "storage_bucket": "holyeat-8de97.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:548945070142:android:e2376cb1accb89400ba96f",
+        "android_client_info": {
+          "package_name": "com.android.holyeat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "548945070142-24tmf3731podd4ooaq450h03obs6oked.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcrjwAggqgzvkNsXGC_qBSb7TJ4DCkLUE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "548945070142-24tmf3731podd4ooaq450h03obs6oked.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
