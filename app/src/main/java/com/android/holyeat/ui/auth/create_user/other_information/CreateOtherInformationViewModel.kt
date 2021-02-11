@@ -1,4 +1,4 @@
-package com.android.holyeat.ui.auth.sign_in
+package com.android.holyeat.ui.auth.create_user.other_information
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -7,13 +7,11 @@ import androidx.lifecycle.viewModelScope
 import com.android.holyeat.data.repository.AuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.filter
-import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SignInViewModel @Inject constructor(val authRepository: AuthRepository) : ViewModel() {
+class CreateOtherInformationViewModel @Inject constructor(val authRepository: AuthRepository) : ViewModel() {
 
     private val _email = MutableLiveData<String>()
     val email: LiveData<String> get() = _email

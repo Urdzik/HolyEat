@@ -1,4 +1,4 @@
-package com.android.holyeat.ui.auth.sign_in
+package com.android.holyeat.ui.chats
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -13,7 +13,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SignInViewModel @Inject constructor(val authRepository: AuthRepository) : ViewModel() {
+class ChatsViewModel @Inject constructor(private val authRepository: AuthRepository) : ViewModel() {
 
     private val _email = MutableLiveData<String>()
     val email: LiveData<String> get() = _email

@@ -13,10 +13,35 @@
         <action
             android:id="@+id/action_signInFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_createMainInformationFragment"
+            app:destination="@id/createMainInformationFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.android.holyeat.ui.auth.sign_up.SignUpFragment"
         android:label="sign_up_fragment"
-        tools:layout="@layout/sign_up_fragment" />
+        tools:layout="@layout/sign_up_fragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_createMainInformationFragment"
+            app:destination="@id/createMainInformationFragment" />
+    </fragment>
+    <action android:id="@+id/action_global_signInFragment" app:destination="@id/signInFragment" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.android.holyeat.ui.main.MainFragment"
+        android:label="MainFragment" />
+    <action android:id="@+id/action_global_mainFragment" app:destination="@id/mainFragment" />
+    <fragment
+        android:id="@+id/createMainInformationFragment"
+        android:name="com.android.holyeat.ui.auth.create_user.main_information.CreateMainInformationFragment"
+        android:label="CreateMainInformationFragment" >
+        <action
+            android:id="@+id/action_createMainInformationFragment_to_createOtherInformationFragment"
+            app:destination="@id/createOtherInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createOtherInformationFragment"
+        android:name="com.android.holyeat.ui.auth.create_user.other_information.CreateOtherInformationFragment"
+        android:label="CreateOtherInformationFragment" />
 </navigation>

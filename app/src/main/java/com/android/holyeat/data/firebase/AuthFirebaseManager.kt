@@ -7,6 +7,6 @@ interface AuthFirebaseManager {
     suspend fun login(
         email: String,
         password: String,
-        result: (result: Flow<Pair<Boolean, String>>) -> Unit
+        result: (result: Pair<Boolean, String>) -> Unit
     )
 }

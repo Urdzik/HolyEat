@@ -6,7 +6,11 @@ import javax.inject.Inject
 
 class AuthRepositoryImpl @Inject constructor(private val authFirebaseManager: AuthFirebaseManager) : AuthRepository {
 
-    override suspend fun login(email: String, password: String, result: (result: Flow<Pair<Boolean, String>>) -> Unit) {
+    override suspend fun login(email: String, password: String, result: (result: Pair<Boolean, String>) -> Unit) {
         authFirebaseManager.login(email, password, result)
+    }
+
+    override suspend fun currentUser(): Flow<Boolean> {
+        return authFirebaseManager.getCurrentUser()
     }
 }

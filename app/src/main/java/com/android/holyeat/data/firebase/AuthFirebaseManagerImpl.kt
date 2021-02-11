@@ -27,34 +27,31 @@ class AuthFirebaseManagerImpl : AuthFirebaseManager {
     override suspend fun login(
         email: String,
         password: String,
-        result: (result: Flow<Pair<Boolean, String>>) -> Unit
+        result: (result: Pair<Boolean, String>) -> Unit
     ) {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener {
                 when {
                     it.isSuccessful -> FirebaseAuth.getInstance().currentUser?.let { user ->
-                        result(flow { emit(Pair(true, "")) })
-                    } ?: result(flow { emit(Pair(false, "${it.exception?.message}")) })
+                        result(Pair(true, ""))
+                    } ?: result(Pair(false, "${it.exception?.message}"))
 
-                    it.exception is FirebaseAuthException -> result(flow {
-                        emit(
+                    it.exception is FirebaseAuthException -> result(
                             Pair(
                                 false,
                                 (it.exception as FirebaseAuthException).errorCode
                             )
                         )
-                    })
 
-                    it.exception is FirebaseNetworkException -> result(flow {
-                        emit(
+                    it.exception is FirebaseNetworkException -> result(
                             Pair(
                                 false,
                                 "Network Error"
                             )
                         )
-                    })
 
-                    else -> result(flow { emit(Pair(false, "${it.exception?.message}")) })
+
+                    else -> result(Pair(false, "${it.exception?.message}"))
                 }
             }
 
