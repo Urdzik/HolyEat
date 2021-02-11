@@ -7,4 +7,17 @@
     <string name="or">АБО</string>
     <string name="sign_up_btn">Ще не маєшь аккаунта? Зареєструйся.</string>
     <string name="registration">Реєстрація</string>
+    <string name="about_you">Про вас</string>
+    <string name="choose_photo">Вибрати фото</string>
+    <string name="sex">Стать</string>
+    <string name="men">Чол</string>
+    <string name="female">Жін</string>
+    <string name="other">other</string>
+    <string name="next">Наступне</string>
+    <string name="skip">Скіпнути</string>
+    <string name="height">Зріст</string>
+    <string name="_2_2">2/2</string>
+    <string name="sm">см</string>
+    <string name="weight">Вага</string>
+    <string name="kg">кг</string>
 </resources>
