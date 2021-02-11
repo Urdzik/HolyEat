@@ -20,5 +20,8 @@ data class  NutritionistModel(
     @ColumnInfo(name = "rank")
     val rank: String,
     @ColumnInfo(name = "rating")
-    val rating: Int
+    val rating: Float,
+    @ColumnInfo(name = "image")
+    val image: String
+
 )

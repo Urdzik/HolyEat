@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HolyEat</string>
+    <string name="welcome_to_holyeat">Welcome to HolyEat</string>
+    <string name="email_hint">Пошта</string>
+    <string name="sign_in">Увійти</string>
+    <string name="google">Увійти з Google</string>
+    <string name="or">АБО</string>
+    <string name="sign_up_btn">Ще не маєшь аккаунта? Зареєструйся.</string>
+    <string name="registration">Реєстрація</string>
 </resources>
