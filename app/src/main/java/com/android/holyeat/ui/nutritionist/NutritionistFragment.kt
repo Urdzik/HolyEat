@@ -1,16 +1,17 @@
 package com.android.holyeat.ui.nutritionist
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.android.holyeat.R
 import com.android.holyeat.databinding.NutritionistFragmentBinding
 import com.android.holyeat.ui.home.HomeAdapter
-import com.android.holyeat.ui.nutritionist.NutritionistFragmentArgs.Companion.fromBundle
+import com.bumptech.glide.Glide
 
 class NutritionistFragment : Fragment() {
 
@@ -31,7 +32,19 @@ class NutritionistFragment : Fragment() {
 
         val args = NutritionistFragmentArgs.fromBundle(requireArguments())
         val data = args.data
+        binding.costNumberTv.text = "${data.cost} грн"
+        binding.expNumberTv.text = "${data.year} років"
+        binding.nameTv.text = data.name
+        binding.ratingBar.rating = data.rating
+        binding.messageTv.text = data.rank
+        Glide.with(binding.root)
+            .load(data.image)
+            .circleCrop()
+            .into(binding.userIcon)
 
+        binding.backBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
     }
 }
