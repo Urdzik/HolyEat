@@ -11,5 +11,11 @@ interface AuthRepository {
         result: (result: Pair<Boolean, String>) -> Unit
     )
 
+    suspend fun signUp(
+        email: String,
+        password: String,
+        result: (result: Pair<Boolean, String>) -> Unit
+    )
+
     suspend fun currentUser(): Flow<Boolean>
 }

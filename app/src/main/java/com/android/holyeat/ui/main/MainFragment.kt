@@ -15,6 +15,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainFragment : Fragment() {
 
     private val viewModel: MainViewModel by viewModels()
+
     private val binding: MainFragmentBinding by viewBinding()
 
     override fun onCreateView(

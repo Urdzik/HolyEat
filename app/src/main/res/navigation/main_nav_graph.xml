@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_nutritionistFragment_to_messengerFragment"
             app:destination="@id/messengerFragment" />
+        <argument
+            android:name="data"
+            app:argType="com.android.holyeat.data.model.NutritionistModel" />
     </fragment>
     <fragment
         android:id="@+id/chatsFragment"

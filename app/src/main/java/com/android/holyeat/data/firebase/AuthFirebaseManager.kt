@@ -9,4 +9,6 @@ interface AuthFirebaseManager {
         password: String,
         result: (result: Pair<Boolean, String>) -> Unit
     )
+
+    fun signUp(email: String, password: String, result: (result: Pair<Boolean, String>) -> Unit)
 }

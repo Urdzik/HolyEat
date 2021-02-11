@@ -16,6 +16,8 @@ class ChatsFragment : Fragment() {
     private val viewModel: ChatsViewModel by viewModels()
     private val binding: ChatsFragmentBinding by viewBinding()
 
+    private val adapter = ChatsAdapter()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -23,5 +25,13 @@ class ChatsFragment : Fragment() {
         return inflater.inflate(R.layout.chats_fragment, container, false)
     }
 
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        viewModel.nutritionists.observe(viewLifecycleOwner){
+            adapter.submitList(it)
+        }
+    }
 }
 

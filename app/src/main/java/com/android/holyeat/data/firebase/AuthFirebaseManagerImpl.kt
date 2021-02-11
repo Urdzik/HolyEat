@@ -54,6 +54,35 @@ class AuthFirebaseManagerImpl : AuthFirebaseManager {
                     else -> result(Pair(false, "${it.exception?.message}"))
                 }
             }
-
     }
+
+    override fun signUp(email: String, password: String, result: (result: Pair<Boolean, String>) -> Unit) {
+        FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener {
+                when {
+                    it.isSuccessful -> FirebaseAuth.getInstance().currentUser?.let { user ->
+                        result(Pair(true, ""))
+                    } ?: result(Pair(false, "${it.exception?.message}"))
+
+                    it.exception is FirebaseAuthException -> result(
+                        Pair(
+                            false,
+                            (it.exception as FirebaseAuthException).errorCode
+                        )
+                    )
+
+                    it.exception is FirebaseNetworkException -> result(
+                        Pair(
+                            false,
+                            "Network Error"
+                        )
+                    )
+
+
+                    else -> result(Pair(false, "${it.exception?.message}"))
+                }
+            }
+    }
+
+
 }

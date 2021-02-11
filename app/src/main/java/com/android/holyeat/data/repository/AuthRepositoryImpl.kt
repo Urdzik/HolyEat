@@ -10,6 +10,14 @@ class AuthRepositoryImpl @Inject constructor(private val authFirebaseManager: Au
         authFirebaseManager.login(email, password, result)
     }
 
+    override suspend fun signUp(
+        email: String,
+        password: String,
+        result: (result: Pair<Boolean, String>) -> Unit
+    ) {
+        authFirebaseManager.signUp(email, password, result)
+    }
+
     override suspend fun currentUser(): Flow<Boolean> {
         return authFirebaseManager.getCurrentUser()
     }

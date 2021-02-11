@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.android.holyeat.R
 import com.android.holyeat.databinding.HomeFragmentBinding
@@ -18,6 +19,8 @@ class HomeFragment : Fragment() {
     private val viewModel: HomeViewModel by viewModels()
     private val binding: HomeFragmentBinding by viewBinding()
 
+    private var adapter = HomeAdapter()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -27,7 +30,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel
+        binding.rv.adapter = adapter
+        viewModel.nutritionists.observe(viewLifecycleOwner){
+            adapter.submitList(it)
+        }
+
+        adapter.click = {
+            findNavController().navigate(HomeFragmentDirections.actionHomeFragmentToNutritionistFragment(it))
+        }
     }
 
 }
