@@ -14,6 +14,8 @@ class ChatsAdapter : ListAdapter<NutritionistModel, ChatsAdapter.ChatsViewHolder
     ChatsDiffUtils()
 ) {
 
+    var click: (data: NutritionistModel) -> Unit = {}
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatsViewHolder {
         return ChatsViewHolder(
             ChatItemBinding.bind(
@@ -29,18 +31,22 @@ class ChatsAdapter : ListAdapter<NutritionistModel, ChatsAdapter.ChatsViewHolder
     }
 
 
-    class ChatsViewHolder(private val binding: ChatItemBinding) :
-        RecyclerView.ViewHolder(binding.root){
-            fun bind(data: NutritionistModel, position: Int){
-                binding.messageTv.text = data.rank
-                binding.nameTv.text = data.name
+    inner class ChatsViewHolder(private val binding: ChatItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
+        fun bind(data: NutritionistModel, position: Int) {
+            binding.messageTv.text = data.rank
+            binding.nameTv.text = data.name
 
-                Glide.with(binding.root)
-                    .load(data.image)
-                    .circleCrop()
-                    .into(binding.photoIv)
+            Glide.with(binding.root)
+                .load(data.image)
+                .circleCrop()
+                .into(binding.photoIv)
+
+            binding.root.setOnClickListener {
+                click(data)
             }
         }
+    }
 
     class ChatsDiffUtils : DiffUtil.ItemCallback<NutritionistModel>() {
         override fun areItemsTheSame(

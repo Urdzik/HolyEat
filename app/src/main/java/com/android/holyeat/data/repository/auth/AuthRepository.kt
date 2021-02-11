@@ -1,4 +1,4 @@
-package com.android.holyeat.data.repository
+package com.android.holyeat.data.repository.auth
 
 import kotlinx.coroutines.flow.Flow
 

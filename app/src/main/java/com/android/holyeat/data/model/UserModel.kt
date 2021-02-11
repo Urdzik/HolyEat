@@ -1,9 +1,12 @@
 package com.android.holyeat.data.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 @Entity(tableName = "user")
 data class UserModel(
 
@@ -19,7 +22,7 @@ data class UserModel(
     @ColumnInfo(name = "city")
     val city: String,
     @ColumnInfo(name = "growth")
-    val growth: Int,
+    var growth: Int,
     @ColumnInfo(name = "weight")
-    val weight: Int
-)
+    var weight: Int
+):Parcelable
