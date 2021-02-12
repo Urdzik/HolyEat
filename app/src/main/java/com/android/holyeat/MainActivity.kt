@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(R.layout.main_activity) {
         lifecycleScope.launch(Dispatchers.IO) {
             authRepository.currentUser().collect {
                 if (it){
-                    findNavController(R.id.nav_host_fragment).navigate(R.id.action_global_mainFragment)
+                    findNavController(R.id.nav_fragment).navigate(R.id.action_global_mainFragment)
                 }
             }
         }

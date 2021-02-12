@@ -46,5 +46,9 @@ class NutritionistFragment : Fragment() {
             findNavController().popBackStack()
         }
 
+        binding.signInBtn.setOnClickListener {
+            findNavController().navigate(NutritionistFragmentDirections.actionNutritionistFragmentToMessengerFragment(data))
+        }
+
     }
 }

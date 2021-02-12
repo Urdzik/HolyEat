@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.android.holyeat.R
 import com.android.holyeat.databinding.ProfileFragmentBinding
@@ -28,8 +29,10 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.user.observe(viewLifecycleOwner) {
-
-
+            binding.ageInfo.text = it.year.toString()
+        }
+        binding.callBtn.setOnClickListener {
+            findNavController().navigate(ProfileFragmentDirections.actionProfileFragmentToPlansFragment())
         }
     }
 }

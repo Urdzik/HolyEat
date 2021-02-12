@@ -13,7 +13,11 @@
     <fragment
         android:id="@+id/messengerFragment"
         android:name="com.android.holyeat.ui.messager.MessengerFragment"
-        android:label="MessengerFragment" />
+        android:label="MessengerFragment" >
+        <argument
+            android:name="data"
+            app:argType="com.android.holyeat.data.model.NutritionistModel" />
+    </fragment>
     <fragment
         android:id="@+id/nutritionistFragment"
         android:name="com.android.holyeat.ui.nutritionist.NutritionistFragment"
@@ -44,5 +48,7 @@
     <fragment
         android:id="@+id/plansFragment"
         android:name="com.android.holyeat.ui.plans.PlansFragment"
-        android:label="PlansFragment" /><action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment"/><action android:id="@+id/action_global_chatsFragment" app:destination="@id/chatsFragment"/><action android:id="@+id/action_global_profileFragment" app:destination="@id/profileFragment"/>
+        android:label="PlansFragment" />
+
+    <action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment"/><action android:id="@+id/action_global_chatsFragment" app:destination="@id/chatsFragment"/><action android:id="@+id/action_global_profileFragment" app:destination="@id/profileFragment"/>
 </navigation>
