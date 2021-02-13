@@ -69,8 +69,6 @@ class CreateOtherInformationFragment : Fragment() {
             viewModel.setUser(data)
         }
 
-
-
         viewModel.status.observe(viewLifecycleOwner) {
             findNavController().navigate(R.id.action_global_mainFragment)
         }

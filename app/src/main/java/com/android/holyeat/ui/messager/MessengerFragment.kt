@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.android.holyeat.R
 import com.android.holyeat.data.model.Author
@@ -123,7 +124,9 @@ class MessengerFragment : Fragment() {
             true
         }
 
-
+        binding.callBtn.setOnClickListener {
+            findNavController().navigate(MessengerFragmentDirections.actionMessengerFragmentToZoomCallDialogFragment())
+        }
     }
 
 }

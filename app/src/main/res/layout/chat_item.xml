@@ -26,8 +26,10 @@
             android:id="@+id/more_iv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
             app:layout_constraintBottom_toBottomOf="@+id/name_tv"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/name_tv"
             app:layout_constraintTop_toTopOf="@+id/name_tv"
             tools:src="@drawable/ic_three_dots" />
 

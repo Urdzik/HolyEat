@@ -34,6 +34,7 @@ class CreateMainInformationFragment : Fragment() {
             .circleCrop()
             .into(binding.userIcon)
 
+        setupClickListeners()
         binding.signInBtn.setOnClickListener {
             val age = binding.setAgeEt.text.toString()
             val name = binding.setNameEt.text.toString()
@@ -69,5 +70,22 @@ class CreateMainInformationFragment : Fragment() {
         }
     }
 
+    private fun setupClickListeners(){
+        binding.sexFemale.setOnClickListener {
+            binding.sexFemale.isSelected = true
+            binding.sexMale.isSelected = false
+            binding.sexOther.isSelected = false
+        }
+        binding.sexMale.setOnClickListener {
+            binding.sexMale.isSelected = true
+            binding.sexFemale.isSelected = false
+            binding.sexOther.isSelected = false
+        }
+        binding.sexOther.setOnClickListener {
+            binding.sexOther.isSelected = true
+            binding.sexFemale.isSelected = false
+            binding.sexMale.isSelected = false
+        }
+    }
 
 }
