@@ -35,13 +35,16 @@ class CreateMainInformationFragment : Fragment() {
             .into(binding.userIcon)
 
         binding.signInBtn.setOnClickListener {
+            val age = binding.setAgeEt.text.toString()
+            val name = binding.setNameEt.text.toString()
+            val city = binding.setCityEt.text.toString()
             findNavController().navigate(
                 CreateMainInformationFragmentDirections.actionCreateMainInformationFragmentToCreateOtherInformationFragment(
                     UserModel(
-                        age = binding.setAgeEt.text.toString() ?: "не вказано",
-                        name = binding.setNameEt.text.toString() ?: "не вказано",
-                        sex = "не вказано",
-                        city = binding.setCityEt.text.toString() ?: "не вказано",
+                        age = age ?: "не вказано",
+                        name = name ?: "не вказано",
+                        sex = "Чол",
+                        city = city ?: "не вказано",
                         growth = 0,
                         weight = 0,
                         photo = "https://image.prntscr.com/image/RA3G17w5RlGY1Kg3avjMZg.jpg"

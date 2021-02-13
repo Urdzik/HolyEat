@@ -16,11 +16,16 @@ class SignUpViewModel  @Inject constructor(val authRepository: AuthRepository) :
     private val _status = MutableLiveData<Boolean>()
     val status: LiveData<Boolean> get() = _status
 
+    private val _error = MutableLiveData<String>()
+    val error: LiveData<String> get() = _error
+
     fun signUp(email: String?, password: String?) {
         viewModelScope.launch(Dispatchers.IO){
             authRepository.signUp(email?: "", password?: "") {
                 if (it.first){
                     _status.postValue(it.first)
+                }else {
+                    _error.postValue(it.second)
                 }
             }
         }

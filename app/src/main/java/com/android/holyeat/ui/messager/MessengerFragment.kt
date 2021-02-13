@@ -43,6 +43,14 @@ class MessengerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val args = MessengerFragmentArgs.fromBundle(requireArguments())
+
+        binding.searchEt.text = args.data.name
+
+        Glide.with(binding.root)
+            .load(args.data.image)
+            .circleCrop()
+            .into(binding.photoIv)
+
         val user1 = Author(
             _id = args.data.year.toString(),
             _name = args.data.name,
