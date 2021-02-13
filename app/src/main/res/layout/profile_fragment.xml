@@ -1,235 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e5e5e5">
 
-    <ImageView
-        android:id="@+id/imageView"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="95dp"
-        android:src="@drawable/toolbar_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/back_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginStart="30dp"
-        android:src="@drawable/ic_back_arrow"
-        app:layout_constraintBottom_toBottomOf="@+id/title"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/title" />
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:src="@drawable/toolbar_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/user_icon"
-        android:layout_width="170dp"
-        android:layout_height="170dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/user_avatar_background_big"
-        android:elevation="0.02dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
+        <ImageView
+            android:id="@+id/user_icon"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/user_avatar_background_big"
+            android:elevation="10dp"
+            android:outlineProvider="none"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/profile"
-        android:textColor="@color/white"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/back_btn"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/holyeat_n"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/call_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="24dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_bx_wallet"
-        app:layout_constraintBottom_toBottomOf="@+id/title"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/title" />
+        <ImageView
+            android:id="@+id/call_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_bx_wallet"
+            app:layout_constraintBottom_toBottomOf="@+id/title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="136dp"
-        android:layout_marginEnd="24dp"
-        app:cardCornerRadius="@dimen/default_radius"
-        app:cardUseCompatPadding="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/default_padding">
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="136dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="56dp"
+            app:cardCornerRadius="@dimen/default_radius"
+            app:cardUseCompatPadding="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/name_tv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="40dp"
-                android:layout_marginEnd="16dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:textColor="#323232"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Катерина Дарт" />
-
-            <View
-                android:id="@+id/hr"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginTop="16dp"
-                android:background="#EEEEEE"
-                app:layout_constraintTop_toBottomOf="@+id/name_tv"
-                tools:layout_editor_absoluteX="16dp" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/age_tv"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Вік:"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hr" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/age_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="27"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/age_tv"
-                app:layout_constraintStart_toEndOf="@+id/age_tv"
-                app:layout_constraintTop_toTopOf="@+id/age_tv" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/city_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Місто:"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/age_info" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/city_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Київ"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/city_tv"
-                app:layout_constraintStart_toEndOf="@+id/city_tv"
-                app:layout_constraintTop_toTopOf="@+id/city_tv" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/height_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Зріст:"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/city_info" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/height_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="175"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/height_tv"
-                app:layout_constraintStart_toEndOf="@+id/height_tv"
-                app:layout_constraintTop_toTopOf="@+id/height_tv" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/weight_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Вага:"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/height_tv" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/weight_info"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="59"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="@+id/weight_tv"
-                app:layout_constraintStart_toEndOf="@+id/weight_tv"
-                app:layout_constraintTop_toTopOf="@+id/weight_tv" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/about_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:fontFamily="@font/montserrat_bold"
-                android:text="Про себе:"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/weight_info" />
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/about_info"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginBottom="16dp"
-                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, velit et finibus ullamcorper"
-                android:textColor="#323232"
-                android:textSize="17sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/about_tv" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+                android:padding="@dimen/default_padding">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/name_tv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Ярослав Поляков"
+                    android:textColor="#323232"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <View
+                    android:id="@+id/hr"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="#EEEEEE"
+                    app:layout_constraintTop_toBottomOf="@+id/name_tv"
+                    tools:layout_editor_absoluteX="16dp" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/age_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Вік:"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hr" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/age_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/age_tv"
+                    app:layout_constraintStart_toEndOf="@+id/age_tv"
+                    app:layout_constraintTop_toTopOf="@+id/age_tv"
+                    android:text="23" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/city_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Місто:"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/age_info" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/city_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/city_tv"
+                    app:layout_constraintStart_toEndOf="@+id/city_tv"
+                    app:layout_constraintTop_toTopOf="@+id/city_tv"
+                    android:text="Київ" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/height_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Зріст:"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/city_info" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/height_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/height_tv"
+                    app:layout_constraintStart_toEndOf="@+id/height_tv"
+                    app:layout_constraintTop_toTopOf="@+id/height_tv"
+                    tools:text="175" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weight_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Вага:"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/height_tv" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/weight_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/weight_tv"
+                    app:layout_constraintStart_toEndOf="@+id/weight_tv"
+                    app:layout_constraintTop_toTopOf="@+id/weight_tv"
+                    tools:text="59" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/montserrat_bold"
+                    android:text="Про себе:"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/weight_info" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/about_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="не вказано"
+                    android:textColor="#323232"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/about_tv" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

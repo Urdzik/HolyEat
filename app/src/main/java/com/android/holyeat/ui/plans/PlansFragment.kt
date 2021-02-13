@@ -6,14 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.android.holyeat.R
 import com.android.holyeat.databinding.PlansFragmentBinding
+import com.android.holyeat.ui.main.MainFragment
 
 class PlansFragment : Fragment() {
 
     private val binding: PlansFragmentBinding by viewBinding()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        ((parentFragment as NavHostFragment).parentFragment as MainFragment).binding.bottomNavigationView.visibility =
+            View.GONE
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

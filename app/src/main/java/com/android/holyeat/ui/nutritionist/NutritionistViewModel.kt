@@ -6,7 +6,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class NutritionistViewModel @Inject constructor(private val nutritionistRepository: NutritionistRepository) : ViewModel() {
+class NutritionistViewModel @Inject constructor(private val nutritionistRepository: NutritionistRepository) :
+    ViewModel() {
 
 
 }

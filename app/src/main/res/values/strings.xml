@@ -5,7 +5,7 @@
     <string name="sign_in">Увійти</string>
     <string name="google">Увійти з Google</string>
     <string name="or">АБО</string>
-    <string name="sign_up_btn">Ще не маєшь аккаунта? Зареєструйся.</string>
+    <string name="sign_up_btn">Ще не маєшь аккаунта? <b>Зареєструйся.</b></string>
     <string name="registration">Реєстрація</string>
     <string name="about_you">Про вас</string>
     <string name="choose_photo">Вибрати фото</string>
@@ -20,7 +20,7 @@
     <string name="sm">см</string>
     <string name="weight">Вага</string>
     <string name="kg">кг</string>
-    <string name="hint_enter_a_message">input</string>
+    <string name="hint_enter_a_message">Повідомлення…</string>
     <string name="profile">Профіль</string>
     <string name="more">Докладніше:</string>
     <string name="lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_donec_sodales_velit_et_finibus_ullamcorper_mauris_purus_fermentum_ante_ut_egestas_orci_tellus_non_lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodales, velit et finibus ullamcorper, mauris purus fermentum ante, ut egestas orci tellus non lorem.</string>
@@ -38,4 +38,15 @@
     <string name="two_month">2 місяці</string>
     <string name="six_month">6 місяців</string>
     <string name="buy">Купити</string>
+    <string name="password">Пароль</string>
+    <string name="confirm_password">Повторіть пароль</string>
+    <string name="city">Місто</string>
+    <string name="age">Вік</string>
+    <string name="name">І\'мя</string>
+    <string name="register">Зареєструватись</string>
+    <string name="holyeat_n"><b>Holy</b>Eat</string>
+    <string name="choose_specialist">Оберіть спеціалиста</string>
+    <string name="experiance">Досвід:</string>
+    <string name="more_about">Детальніше</string>
+    <string name="search">Пошук...</string>
 </resources>

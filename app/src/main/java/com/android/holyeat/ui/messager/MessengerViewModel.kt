@@ -11,7 +11,8 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class MessengerViewModel @Inject constructor(private val authRepository: AuthRepository) : ViewModel() {
+class MessengerViewModel @Inject constructor(private val authRepository: AuthRepository) :
+    ViewModel() {
 
 
 }

@@ -20,7 +20,7 @@ class MainFragment : Fragment() {
 
     private val viewModel: MainViewModel by viewModels()
 
-    private val binding: MainFragmentBinding by viewBinding()
+    val binding: MainFragmentBinding by viewBinding()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

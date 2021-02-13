@@ -3,15 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <!--    <LinearLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent">-->
-
-    <!--        <ScrollView-->
-    <!--            android:layout_width="match_parent"-->
-    <!--            android:layout_height="match_parent">-->
-
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -69,7 +60,7 @@
             android:layout_width="0dp"
             android:layout_height="34dp"
             android:layout_marginTop="16dp"
-            android:max="50"
+            android:max="250"
             android:padding="0dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -82,13 +73,13 @@
             android:layout_height="35dp"
             android:layout_marginEnd="10dp"
             android:background="@drawable/outlined_background"
-            android:textColor="#323232"
             android:gravity="center"
+            android:text="0"
+            android:textColor="#323232"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="@+id/text1"
             app:layout_constraintEnd_toStartOf="@+id/text1"
-            app:layout_constraintTop_toTopOf="@+id/text1"
-            tools:text="176" />
+            app:layout_constraintTop_toTopOf="@+id/text1" />
 
         <TextView
             android:id="@+id/text1"
@@ -120,7 +111,7 @@
             android:layout_width="match_parent"
             android:layout_height="34dp"
             android:layout_marginTop="16dp"
-            android:max="50"
+            android:max="250"
             android:padding="0dp"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -132,14 +123,14 @@
             android:layout_width="60dp"
             android:layout_height="35dp"
             android:layout_marginEnd="10dp"
-            android:gravity="center"
             android:background="@drawable/outlined_background"
+            android:gravity="center"
+            android:text="0"
             android:textColor="#323232"
             android:textSize="17sp"
             app:layout_constraintBottom_toBottomOf="@+id/sm"
             app:layout_constraintEnd_toStartOf="@+id/sm"
-            app:layout_constraintTop_toTopOf="@+id/sm"
-            tools:text="54" />
+            app:layout_constraintTop_toTopOf="@+id/sm" />
 
         <TextView
             android:id="@+id/sm"
@@ -160,19 +151,19 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="16dp"
             android:background="@drawable/button_background"
             android:text="@string/next"
             android:theme="@style/GradientButtonStyle"
-            app:layout_constraintBottom_toTopOf="@+id/text2"
+            app:layout_constraintBottom_toTopOf="@+id/skip"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
-            android:id="@+id/text2"
+            android:id="@+id/skip"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
+            android:layout_marginBottom="24dp"
             android:text="@string/skip"
             android:textColor="#9DA1A7"
             android:textSize="15sp"
@@ -180,6 +171,4 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-    <!--        </ScrollView>-->
-    <!--    </LinearLayout>-->
 </layout>

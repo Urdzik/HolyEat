@@ -45,23 +45,25 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="16dp"
+                    android:text="1/2"
                     android:textColor="#323232"
                     android:textSize="17sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/back_btn"
-                    android:text="1/2" />
+                    app:layout_constraintTop_toBottomOf="@+id/back_btn" />
 
                 <ImageView
                     android:id="@+id/user_icon"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="32dp"
-                    android:src="@drawable/ic_back_arrow"
+                    android:background="@drawable/outlined_avatar_background"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_baseline_person_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/profile_page"
-                    app:tint="@color/black" />
+                    app:tint="@color/hint_color" />
 
                 <TextView
                     android:id="@+id/choose_photo_btn"
@@ -92,7 +94,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="16dp"
                     android:text="@string/men"
                     android:theme="@style/PlainButtonStyle"
                     app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +105,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="16dp"
                     android:text="@string/female"
                     android:theme="@style/PlainButtonStyle"
                     app:layout_constraintStart_toEndOf="@+id/sex_male"
@@ -114,7 +116,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
-                    android:layout_marginTop="24dp"
+                    android:layout_marginTop="16dp"
                     android:text="@string/other"
                     android:theme="@style/PlainButtonStyle"
                     app:layout_constraintStart_toEndOf="@+id/sex_female"
@@ -128,7 +130,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="40dp"
-                    android:hint="@string/email_hint"
+                    android:hint="@string/name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/sex_other">
@@ -148,7 +150,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="40dp"
-                    android:hint="@string/email_hint"
+                    android:hint="@string/age"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/set_name_ll">
@@ -168,7 +170,7 @@
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="24dp"
                     android:layout_marginEnd="40dp"
-                    android:hint="@string/email_hint"
+                    android:hint="@string/city"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/set_age_ll">
@@ -186,7 +188,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="32dp"
                     android:layout_marginEnd="40dp"
                     android:background="@drawable/button_background"
                     android:text="@string/next"
@@ -196,11 +198,11 @@
                     app:layout_constraintTop_toBottomOf="@+id/set_city_ll" />
 
                 <TextView
-                    android:id="@+id/text2"
+                    android:id="@+id/skip"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="32dp"
                     android:text="@string/skip"
                     android:textColor="#9DA1A7"
                     android:textSize="15sp"

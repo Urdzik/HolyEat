@@ -17,11 +17,19 @@
         <ImageView
             android:id="@+id/photo_iv"
             android:layout_width="60dp"
-            tools:src="@drawable/ic_launcher_background"
             android:layout_height="60dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_launcher_background" />
 
+        <ImageView
+            android:id="@+id/more_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/name_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/name_tv"
+            tools:src="@drawable/ic_three_dots" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/name_tv"

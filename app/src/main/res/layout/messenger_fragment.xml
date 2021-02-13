@@ -1,8 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:background="#e5e5e5">
+
+    <ImageView
+        android:id="@+id/toolbar_bg"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:src="@drawable/toolbar_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="24dp"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/photo_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/photo_iv" />
+
+    <ImageView
+        android:id="@+id/photo_iv"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/toolbar_bg"
+        app:layout_constraintStart_toEndOf="@+id/back_btn"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/search_et"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/white"
+        android:lines="1"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/photo_iv"
+        app:layout_constraintStart_toEndOf="@+id/photo_iv"
+        app:layout_constraintTop_toTopOf="@+id/photo_iv"
+        tools:text="Петро Петрович" />
+
+    <ImageView
+        android:id="@+id/call_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_call"
+        app:layout_constraintBottom_toBottomOf="@+id/search_et"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar_bg"
+        app:layout_constraintTop_toTopOf="@+id/search_et" />
 
     <com.stfalcon.chatkit.messages.MessagesList
         android:id="@+id/messagesList"
@@ -12,15 +67,25 @@
         app:layout_constraintBottom_toTopOf="@+id/input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_bg"
+        app:outcomingDefaultBubbleColor="#2DB9FB" />
 
     <com.stfalcon.chatkit.messages.MessageInput
         android:id="@+id/input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:attachmentButtonDefaultIconColor="@color/blue_app"
+        app:inputButtonBackground="@color/white"
+        app:inputButtonHeight="30dp"
+        app:inputButtonIcon="@drawable/ic_send_message"
+        app:inputButtonMargin="16dp"
+        app:inputButtonWidth="30dp"
         app:inputHint="@string/hint_enter_a_message"
+        app:inputMaxLines="3"
+        app:inputTextColor="@color/black"
+        app:inputTextSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

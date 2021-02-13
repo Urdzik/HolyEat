@@ -20,6 +20,6 @@ abstract class HolyEatDatabase : RoomDatabase() {
     abstract fun dao(): DatabaseApi
 
     companion object {
-        const val DATABASE_NAME = "vitality_db"
+        const val DATABASE_NAME = "db"
     }
 }
