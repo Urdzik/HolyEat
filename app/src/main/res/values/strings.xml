@@ -12,7 +12,7 @@
     <string name="sex">Стать</string>
     <string name="men">Чол</string>
     <string name="female">Жін</string>
-    <string name="other">other</string>
+    <string name="other">Інше</string>
     <string name="next">Наступне</string>
     <string name="skip">Скіпнути</string>
     <string name="height">Зріст</string>
@@ -49,4 +49,5 @@
     <string name="experiance">Досвід:</string>
     <string name="more_about">Детальніше</string>
     <string name="search">Пошук...</string>
+    <string name="zoom">Виклик <b>ZOOM</b></string>
 </resources>

@@ -17,6 +17,9 @@
         <argument
             android:name="data"
             app:argType="com.android.holyeat.data.model.NutritionistModel" />
+        <action
+            android:id="@+id/action_messengerFragment_to_zoomCallDialogFragment"
+            app:destination="@id/zoomCallDialogFragment" />
     </fragment>
     <fragment
         android:id="@+id/nutritionistFragment"
@@ -48,7 +51,15 @@
     <fragment
         android:id="@+id/plansFragment"
         android:name="com.android.holyeat.ui.plans.PlansFragment"
-        android:label="PlansFragment" />
+        android:label="PlansFragment" >
+        <action
+            android:id="@+id/action_plansFragment_to_chatsFragment"
+            app:destination="@id/chatsFragment" />
+    </fragment>
 
     <action android:id="@+id/action_global_homeFragment" app:destination="@id/homeFragment"/><action android:id="@+id/action_global_chatsFragment" app:destination="@id/chatsFragment"/><action android:id="@+id/action_global_profileFragment" app:destination="@id/profileFragment"/>
+    <dialog
+        android:id="@+id/zoomCallDialogFragment"
+        android:name="com.android.holyeat.ui.messager.ZoomCallDialogFragment"
+        android:label="ZoomCallDialogFragment" />
 </navigation>

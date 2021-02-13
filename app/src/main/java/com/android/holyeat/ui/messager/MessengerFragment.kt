@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.android.holyeat.R
 import com.android.holyeat.data.model.Author
@@ -22,7 +23,6 @@ import java.util.*
 
 class MessengerFragment : Fragment() {
 
-    private val viewModel: MessengerViewModel by viewModels()
     private val binding: MessengerFragmentBinding by viewBinding()
 
 
@@ -43,6 +43,14 @@ class MessengerFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val args = MessengerFragmentArgs.fromBundle(requireArguments())
+
+        binding.searchEt.text = args.data.name
+
+        Glide.with(binding.root)
+            .load(args.data.image)
+            .circleCrop()
+            .into(binding.photoIv)
+
         val user1 = Author(
             _id = args.data.year.toString(),
             _name = args.data.name,
@@ -66,42 +74,46 @@ class MessengerFragment : Fragment() {
             listOf(
                 Message(
                     _id = "2",
-                    _text = "fdfds",
+                    _text = "Доброго дня!\nСьогодні о котрій?",
                     _user = user1,
                     _createAt = Date(Date().time - 10000000)
                 ),
                 Message(
                     _id = "3",
-                    _text = "erwerwefew",
+                    _text = "Доброго дня!\nСьогодні о 20:00.",
                     _user = user2,
                     _createAt = Date(Date().time - 10000000)
                 ),
                 Message(
                     _id = "4",
-                    _text = "erwerwefew",
+                    _text = "Чудово!\nТоді до зустрічі",
                     _user = user1,
                     _createAt = Date(Date().time - 10000000)
                 ),
                 Message(
                     _id = "5",
-                    _text = "erwerwefew",
-                    _user = user1,
-                    _createAt = Date(Date().time - 10000000)
-                ),
-                Message(
-                    _id = "6",
-                    _text = "erwerwefew",
+                    _text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sodale?",
                     _user = user2,
                     _createAt = Date(Date().time - 10000000)
                 ),
                 Message(
-                    _id = "7",
-                    _text = "erwerwefew",
+                    _id = "6",
+                    _text = "Обговоримо це на зустрічі)",
                     _user = user1,
+                    _createAt = Date(Date().time - 10000000)
+                ),
+                Message(
+                    _id = "7",
+                    _text = "Добре.",
+                    _user = user2,
                     _createAt = Date(Date().time - 10000000)
                 ),
             ), true
         )
+
+        binding.backBtn.setOnClickListener {
+            findNavController().popBackStack()
+        }
 
         binding.input.setInputListener {
             adapter.addToStart(
@@ -115,7 +127,9 @@ class MessengerFragment : Fragment() {
             true
         }
 
-
+        binding.callBtn.setOnClickListener {
+            findNavController().navigate(MessengerFragmentDirections.actionMessengerFragmentToZoomCallDialogFragment())
+        }
     }
 
 }

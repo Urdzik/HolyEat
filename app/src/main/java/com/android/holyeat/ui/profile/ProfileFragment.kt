@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
@@ -41,7 +42,14 @@ class ProfileFragment : Fragment() {
             binding.weightInfo.text = it.weight.toString()
             binding.heightInfo.text = it.growth.toString()
             binding.nameTv.text = it.name
+
+            Glide.with(binding.root)
+                .load("https://image.prntscr.com/image/RA3G17w5RlGY1Kg3avjMZg.jpg")
+                .circleCrop()
+                .into(binding.userIcon)
         }
+
+
     }
 
     private fun setupView() {

@@ -22,7 +22,7 @@ interface DatabaseApi {
     fun getNutritionists(): Flow<List<NutritionistModel>>
 
 
-    @Query("SELECT* FROM user LIMIT 1")
-    fun getUser(): Flow<UserModel>
+    @Query("SELECT* FROM user")
+    fun getUser(): Flow<List<UserModel>>
 
 }

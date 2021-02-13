@@ -17,10 +17,8 @@ import com.bumptech.glide.Glide
 
 class NutritionistFragment : Fragment() {
 
-    private val viewModel: NutritionistViewModel by viewModels()
     private val binding: NutritionistFragmentBinding by viewBinding()
 
-    private var adapter = HomeAdapter()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         ((parentFragment as NavHostFragment).parentFragment as MainFragment).binding.bottomNavigationView.visibility =
@@ -52,7 +50,7 @@ class NutritionistFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        binding.signInBtn.setOnClickListener {
+        binding.goToMessage.setOnClickListener {
             findNavController().navigate(
                 NutritionistFragmentDirections.actionNutritionistFragmentToMessengerFragment(
                     data

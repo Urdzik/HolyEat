@@ -4,40 +4,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/toolbar_bg"
-        android:layout_width="match_parent"
-        android:layout_height="95dp"
-        android:src="@drawable/toolbar_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/toolbar_bg"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:src="@drawable/toolbar_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/holyeat_n"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            app:layout_constraintBottom_toTopOf="@+id/subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/toolbar_bg" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/choose_specialist"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/toolbar_bg"
+            app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/search_iv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
         android:src="@drawable/ic_search"
-        app:layout_constraintBottom_toBottomOf="@+id/toolbar_bg"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/toolbar_bg" />
-
-    <EditText
-        android:id="@+id/search_et"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="64dp"
-        android:backgroundTint="@color/white"
-        android:text="@string/search"
-        android:textColor="@color/white"
-        android:lines="1"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="@+id/search_iv"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/search_iv"
-        app:layout_constraintTop_toTopOf="@+id/search_iv" />
+        app:layout_constraintBottom_toBottomOf="@+id/subtitle"
+        app:layout_constraintEnd_toEndOf="@+id/toolbar_bg"
+        app:layout_constraintTop_toTopOf="@+id/title" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"

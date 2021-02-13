@@ -5,6 +5,7 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:background="@color/white"
         android:layout_height="match_parent">
 
         <TextView
@@ -146,7 +147,7 @@
             app:layout_constraintTop_toBottomOf="@+id/text1" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/sign_in_btn"
+            android:id="@+id/next_bnt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="40dp"

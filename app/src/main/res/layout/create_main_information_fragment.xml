@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <LinearLayout
+        android:background="@color/white"
+
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -57,13 +59,10 @@
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:layout_marginTop="32dp"
-                    android:background="@drawable/outlined_avatar_background"
                     android:padding="12dp"
-                    android:src="@drawable/ic_baseline_person_24"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/profile_page"
-                    app:tint="@color/hint_color" />
+                    app:layout_constraintTop_toBottomOf="@+id/profile_page" />
 
                 <TextView
                     android:id="@+id/choose_photo_btn"
@@ -91,34 +90,41 @@
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sex_male"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="16dp"
+                    android:background="@drawable/sex_button_shape"
                     android:text="@string/men"
                     android:theme="@style/PlainButtonStyle"
+                    app:layout_constraintEnd_toStartOf="@id/sex_female"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/sex_title" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sex_female"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
                     android:layout_marginTop="16dp"
+                    android:background="@drawable/sex_button_shape"
                     android:text="@string/female"
                     android:theme="@style/PlainButtonStyle"
+                    app:layout_constraintEnd_toStartOf="@id/sex_other"
                     app:layout_constraintStart_toEndOf="@+id/sex_male"
                     app:layout_constraintTop_toBottomOf="@+id/sex_title" />
 
                 <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/sex_other"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"
+
                     android:layout_marginTop="16dp"
+                    android:background="@drawable/sex_button_shape"
                     android:text="@string/other"
                     android:theme="@style/PlainButtonStyle"
+                    app:layout_constraintEnd_toEndOf="@+id/set_name_ll"
                     app:layout_constraintStart_toEndOf="@+id/sex_female"
                     app:layout_constraintTop_toBottomOf="@+id/sex_title" />
 
@@ -184,7 +190,7 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/sign_in_btn"
+                    android:id="@+id/next_bnt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="40dp"

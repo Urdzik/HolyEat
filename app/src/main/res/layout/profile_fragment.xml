@@ -76,7 +76,7 @@
                 android:padding="@dimen/default_padding">
 
 
-                <androidx.appcompat.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/name_tv"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/hr" />
 
-                <androidx.appcompat.widget.AppCompatTextView
+                <TextView
                     android:id="@+id/age_info"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

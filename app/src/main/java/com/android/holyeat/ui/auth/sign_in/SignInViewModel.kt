@@ -16,10 +16,17 @@ class SignInViewModel @Inject constructor(val authRepository: AuthRepository) : 
     private val _status = MutableLiveData<Boolean>()
     val status: LiveData<Boolean> get() = _status
 
+    private val _error = MutableLiveData<String>()
+    val error: LiveData<String> get() = _error
+
     fun login(email: String?, password: String?) {
         viewModelScope.launch(Dispatchers.IO){
             authRepository.login(email?: "", password?: "") {
-                _status.postValue(it.first)
+                if(it.first){
+                    _status.postValue(it.first)
+                }else{
+                    _error.postValue(it.second)
+                }
             }
         }
     }
