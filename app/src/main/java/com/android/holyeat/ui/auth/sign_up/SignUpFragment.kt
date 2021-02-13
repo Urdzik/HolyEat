@@ -41,7 +41,11 @@ class SignUpFragment : Fragment() {
         }
 
         binding.signInBtn.setOnClickListener {
-            viewModel.signUp(binding.emailEt.text.toString(), binding.passwordEt.text.toString())
+            if (binding.passwordEt.text.toString().trim() == binding.passwordConfirmEt.text.toString().trim()){
+                viewModel.signUp(binding.emailEt.text.toString().trim(), binding.passwordEt.text.toString().trim())
+            }else {
+                Toast.makeText(requireContext(), "Пароль не співпадає", Toast.LENGTH_SHORT).show()
+            }
         }
 
     }

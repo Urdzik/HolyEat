@@ -35,7 +35,7 @@ class PlansFragment : Fragment() {
         binding.backBtn.setOnClickListener {
             findNavController().popBackStack()
         }
-        binding.signInBtn.setOnClickListener{
+        binding.buyBtn.setOnClickListener {
             findNavController().navigate(PlansFragmentDirections.actionGlobalChatsFragment())
         }
     }

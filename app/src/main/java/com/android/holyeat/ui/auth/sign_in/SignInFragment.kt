@@ -35,7 +35,7 @@ class SignInFragment : Fragment() {
         }
 
         binding.signInBtn.setOnClickListener {
-            viewModel.login(binding.emailEt.text.toString(), binding.passwordEt.text.toString())
+            viewModel.login(binding.emailEt.text.toString().trim(), binding.passwordEt.text.toString().trim())
         }
 
         viewModel.error.observe(viewLifecycleOwner) {

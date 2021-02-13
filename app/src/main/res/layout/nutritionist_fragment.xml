@@ -216,7 +216,7 @@
 
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/sign_in_btn"
+            android:id="@+id/go_to_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"

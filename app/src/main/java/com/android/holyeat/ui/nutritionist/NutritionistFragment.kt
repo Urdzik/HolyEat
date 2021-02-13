@@ -50,7 +50,7 @@ class NutritionistFragment : Fragment() {
             findNavController().popBackStack()
         }
 
-        binding.signInBtn.setOnClickListener {
+        binding.goToMessage.setOnClickListener {
             findNavController().navigate(
                 NutritionistFragmentDirections.actionNutritionistFragmentToMessengerFragment(
                     data
