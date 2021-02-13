@@ -33,8 +33,18 @@ class ChatsAdapter : ListAdapter<NutritionistModel, ChatsAdapter.ChatsViewHolder
 
     inner class ChatsViewHolder(private val binding: ChatItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
+
+        val list = listOf<String>(
+            "Ви найняли лікара-дієто...  ",
+            "Так, звісно!",
+            "Так, звісно!",
+            "Так, звісно!",
+            "Так, звісно!",
+            "Так, звісно!"
+        )
+
         fun bind(data: NutritionistModel, position: Int) {
-            binding.messageTv.text = data.rank
+            binding.messageTv.text = list[position]
             binding.nameTv.text = data.name
 
             Glide.with(binding.root)

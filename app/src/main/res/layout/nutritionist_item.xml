@@ -58,6 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin"
             android:progressTint="#FFEB3B"
+            android:indeterminateTint="#FFEB3B"
+            android:secondaryProgressTint="#FFEB3B"
             app:layout_constraintStart_toStartOf="@+id/photo_iv"
             app:layout_constraintTop_toBottomOf="@+id/message_tv" />
 

@@ -35,7 +35,7 @@ class CreateMainInformationFragment : Fragment() {
             .into(binding.userIcon)
 
         setupClickListeners()
-        binding.signInBtn.setOnClickListener {
+        binding.nextBnt.setOnClickListener {
             val age = binding.setAgeEt.text.toString()
             val name = binding.setNameEt.text.toString()
             val city = binding.setCityEt.text.toString()

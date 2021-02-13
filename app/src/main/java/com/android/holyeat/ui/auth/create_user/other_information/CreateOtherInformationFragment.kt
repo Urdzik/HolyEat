@@ -9,6 +9,7 @@ import android.widget.SeekBar
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.observe
 import androidx.navigation.fragment.findNavController
 import by.kirich1409.viewbindingdelegate.viewBinding
 import com.android.holyeat.R
@@ -58,7 +59,7 @@ class CreateOtherInformationFragment : Fragment() {
             }
         })
 
-        binding.signInBtn.setOnClickListener {
+        binding.nextBnt.setOnClickListener {
             viewModel.setUser(data.apply {
                 weight = binding.weightTv.text?.toString()?.toInt() ?: 0
                 growth = binding.heightTv.text?.toString()?.toInt() ?: 0

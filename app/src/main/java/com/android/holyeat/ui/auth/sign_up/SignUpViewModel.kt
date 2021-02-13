@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class SignUpViewModel  @Inject constructor(val authRepository: AuthRepository) : ViewModel() {
+class SignUpViewModel  @Inject constructor(private val authRepository: AuthRepository) : ViewModel() {
 
     private val _status = MutableLiveData<Boolean>()
     val status: LiveData<Boolean> get() = _status
